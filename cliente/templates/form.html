@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block tittle %}
+    <title>Registrar</title>
+    {% endblock tittle %}
+  </head>
+  <body>
+    {% block principal %}
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form action="/your-name/" method="post">
+            {% csrf_token %} 
+            {{ form }}
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+    {% endblock principal %}
+  </body>
+</html>
